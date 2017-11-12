@@ -1,6 +1,23 @@
-<style>
-.form-container{
-    margin-top: 10%;
-    background-color: black;
+.top-container{
+    padding-top: 15%;
+    /*background-color: brown;*/
 }
-</style>
+
+.form-group{
+    /*width: 100%;*/
+}
+
+html, body{
+    height: 100%;
+}
+
+.general-container{
+    background-color: lightpink;
+    height: 100%;
+    text-align: center;
+    /*line-height: 100px;*/
+}
+
+.center-block{
+    width: 100%;
+}
