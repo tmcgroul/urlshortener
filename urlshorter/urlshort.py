@@ -9,6 +9,7 @@ def add_shorted_url(long_url):
     add_url.save()
     add_url.Code = encode(add_url.id)
     add_url.save()
+    return add_url.Code
 
 def encode(num):
     sb = ""
