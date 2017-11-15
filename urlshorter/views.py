@@ -12,3 +12,6 @@ def mainpage(request):
         ##new_form = form.save()
 
     return render(request, 'urlshorter/mainpage.html', locals())
+
+
+
