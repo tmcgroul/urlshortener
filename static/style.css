@@ -3,8 +3,8 @@
     /*background-color: brown;*/
 }
 
-.form-group{
-    /*width: 100%;*/
+input[type="text"]{
+    width: 500px;
 }
 
 html, body{
