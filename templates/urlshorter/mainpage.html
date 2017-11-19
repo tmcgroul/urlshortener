@@ -19,15 +19,13 @@
                                 <h1>Сокращатель ссылок</h1>
                                 Длинная ссылка:
                                 <div class="field-URL">
-                                    {{ form.URL.label_tag }}
                                     {{ form.URL }}
                                 </div>
                                 Короткая ссылка:
                                 <div class="field-Code">
-                                    {{ form.Code.label_tag}}
                                     {{ form.Code }}
                                 </div>
-                                <button type="submit">Сократить</button>
+                                <button formnovalidate type="submit">Сократить</button>
                             </form>
                         </div>
                     </div>

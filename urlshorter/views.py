@@ -8,9 +8,9 @@ def mainpage(request):
     if request.method == "POST":
         url = request.POST.get("URL")
         #add record to db and received Code
-        #received_code = add_shorted_url(url)#returned short_url
-        #form = UrlsForm({'Code':received_code, 'URL':url})
-        ##new_form = form.save()
+        received_code = add_shorted_url(url)#returned short_url
+        if received_code != None:
+            form = UrlsForm({'Code':received_code, 'URL':url})
     return render(request, 'urlshorter/mainpage.html', locals())
 
 def trans_to_shorturl(self, shortcode=None):
