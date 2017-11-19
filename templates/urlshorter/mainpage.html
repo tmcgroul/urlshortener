@@ -1,35 +1,38 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>urlshorter</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>urlshorter</title>
 
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-</head>
-<body>
-<div class="general-container">
-    <div class="container top-container">
-        <div class="row">
-            <div class="col-lg-12 col-lg-offset-4">
-                <div class="form-container">
-
-                    <form action="" method="post" class="center-block">{% csrf_token %}
-                        <h1>Сокращатель ссылок</h1>
-                        Ссылка:
-                        <div class="field-URL">
-                            {{ form.URL.label_tag }}
-                            {{ form.URL }}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+              integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="general-container">
+            <div class="container top-container">
+                <div class="row">
+                    <div class="col-lg-12 col-lg-offset-4">
+                        <div class="form-container">
+                            <form action="" method="post" class="center-block" id="id_form">{% csrf_token %}
+                                <h1>Сокращатель ссылок</h1>
+                                Длинная ссылка:
+                                <div class="field-URL">
+                                    {{ form.URL.label_tag }}
+                                    {{ form.URL }}
+                                </div>
+                                Короткая ссылка:
+                                <div class="field-Code">
+                                    {{ form.Code.label_tag}}
+                                    {{ form.Code }}
+                                </div>
+                                <button type="submit">Сократить</button>
+                            </form>
                         </div>
-                        <button type="submit" formnovalidate class="">Сократить</button>
-                    </form>
-
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>
