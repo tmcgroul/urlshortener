@@ -3,12 +3,17 @@
     /*background-color: brown;*/
 }
 
+.form-fields {
+    margin-bottom: 10px;
+}
+
 input[type="text"]{
     width: 500px;
 }
 
 html, body{
     height: 100%;
+    font-family: "Philosopher",sans-serif;
 }
 
 .general-container{

@@ -5,9 +5,11 @@
         <meta charset="UTF-8">
         <title>urlshorter</title>
 
-        <link rel="stylesheet" href="{% static 'style.css' %}">
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
               integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link href="http://fonts.googleapis.com/css?family=Philosopher:400,700&amp;subset=cyrillic,latin" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="general-container">
@@ -18,11 +20,11 @@
                             <form action="" method="post" class="center-block" id="id_form">{% csrf_token %}
                                 <h1>Сокращатель ссылок</h1>
                                 Длинная ссылка:
-                                <div class="field-URL">
+                                <div class="form-fields">
                                     {{ form.URL }}
                                 </div>
                                 Короткая ссылка:
-                                <div class="field-Code">
+                                <div class="form-fields">
                                     {{ form.Code }}
                                 </div>
                                 <button formnovalidate type="submit">Сократить</button>
