@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import UrlsForm
 from .urlshort import add_shorted_url
 from .models import Url
@@ -16,9 +16,7 @@ def mainpage(request):
 def trans_to_shorturl(self, shortcode=None):
     #getting long_url by filtered "Code"
     shortcode = 'http://127.0.0.1:8000/' + shortcode
-    print(shortcode)
-    long_url = Url.objects.get(Code=shortcode);
-    print(long_url.Code)
+    long_url = get_object_or_404(Url, Code=shortcode)
     return redirect(long_url.URL)
 
 
